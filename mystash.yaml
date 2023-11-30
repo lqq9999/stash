@@ -39,9 +39,9 @@ d: &d {type: http, behavior: domain, interval: 86400}
 p: &p {type: http, interval: 42300, health-check: {enable: true, url: http://www.apple.com/library/test/success.html, interval: 300}}
 
 # 代理组相关
-g: &g {type: select, proxies: [Proxy, Auto, Fallback, HongKong, TaiWan, Singapore, Japan, America, Others, DIRECT]}
+g: &g {type: select, proxies: [Proxy, HongKong, TaiWan, Singapore, Japan, America, Others, DIRECT]}
 
-m: &m {type: select, proxies: [DIRECT, Proxy, Auto, Fallback, HongKong, TaiWan, Singapore, Japan, America, Others]}
+m: &m {type: select, proxies: [DIRECT, Proxy, HongKong, TaiWan, Singapore, Japan, America, Others]}
 
 # 本地服务器
 proxies: null
@@ -62,13 +62,13 @@ proxy-groups:
  - {name: Final, icon: https://raw.githubusercontents.com/Koolson/Qure/master/IconSet/mini/Final.png, <<: *g, proxies: [Proxy,DIRECT]}
 
 # 节点切换
- - {name: Proxy, icon: https://raw.githubusercontents.com/Koolson/Qure/master/IconSet/mini/Rocket.png, <<: *g, proxies: [Auto,Fallback,HongKong,TaiWan,Singapore,Japan,America,Others]}
+ - {name: Proxy, icon: https://raw.githubusercontents.com/Koolson/Qure/master/IconSet/mini/Rocket.png, <<: *g, proxies: [HongKong,TaiWan,Singapore,Japan,America,Others]}
 
 # 国外网站
  - {name: Global, icon: https://raw.githubusercontents.com/Koolson/Qure/master/IconSet/mini/Global.png, <<: *g}
 
 # 国内网站
- - {name: Mainland, icon: https://raw.githubusercontents.com/Koolson/Qure/master/IconSet/mini/China_Map.png, <<: *m, proxies: [DIRECT,Proxy,Auto]}
+ - {name: Mainland, icon: https://raw.githubusercontents.com/Koolson/Qure/master/IconSet/mini/China_Map.png, <<: *m, proxies: [DIRECT,Proxy]}
 
 # 人工智能
  - {name: OpenAI, icon: https://raw.githubusercontents.com/Koolson/Qure/master/IconSet/mini/Bot.png, <<: *g, proxies: [America,Japan,Singapore,TaiWan,Others]}
