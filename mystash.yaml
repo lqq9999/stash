@@ -140,9 +140,9 @@ rule-providers:
 # 去广告
   🛑 广告拦截: {<<: *c, path: ./rules/BanAD.yaml, url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanAD.list}
   🍃 应用净化: {<<: *c, path: ./rules/BanProgramAD.yaml, url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanProgramAD.list}
-  🆎 AdBlock{<<: *c, path: ./rules/BanEasyList.yaml, url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanEasyList.list}
-  🆎 AdBlock{<<: *c, path: ./rules/BanEasyListChina.yaml, url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanEasyListChina.list}
-  🛡️ 隐私防护{<<: *c, path: ./rules/BanEasyPrivacy.yaml, url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanEasyPrivacy.list}
+  🆎 AdBlock1: {<<: *c, path: ./rules/BanEasyList.yaml, url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanEasyList.list}
+  🆎 AdBlock2: {<<: *c, path: ./rules/BanEasyListChina.yaml, url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanEasyListChina.list}
+  🛡️ 隐私防护: {<<: *c, path: ./rules/BanEasyPrivacy.yaml, url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanEasyPrivacy.list}
 
 
 # 网络测试
@@ -216,8 +216,8 @@ rules:
 
   - RULE-SET,🛑 广告拦截,REJECT
   - RULE-SET,🍃 应用净化,REJECT
-  - RULE-SET,🆎 AdBlock,REJECT
-  - RULE-SET,🆎 AdBlock,REJECT
+  - RULE-SET,🆎 AdBlock1,REJECT
+  - RULE-SET,🆎 AdBlock2,REJECT
   - RULE-SET,🛡️ 隐私防护,REJECT
 
   - RULE-SET,speedtest,Speedtest
