@@ -129,11 +129,22 @@ proxy-groups:
 # 其他节点
  - {name: Others, icon: https://raw.githubusercontents.com/Koolson/Qure/master/IconSet/mini/Airport.png, <<: *u, filter: "^((?!香港|HK|Hong Kong|台湾|TW|TaiWan|新加坡|SG|Singapore|狮城|日本|JP|Japan|美国|US|States|American|Music)).*$"}
 
+
+
 # 远程规则集
 rule-providers:
 
 # 隐私网络
  private: {<<: *d, path: ./rules/private.yaml, url: https://raw.githubusercontents.com/Loyalsoldier/clash-rules/release/private.txt}
+
+# 去广告
+
+ruleset=🛑 广告拦截,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanAD.list
+ruleset=🍃 应用净化,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanProgramAD.list
+ruleset=🆎 AdBlock,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanEasyList.list
+ruleset=🆎 AdBlock,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanEasyListChina.list
+ruleset=🛡️ 隐私防护,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanEasyPrivacy.list
+
 
 # 网络测试
  speedtest: {<<: *c, path: ./rules/speedtest.yaml, url: https://raw.githubusercontents.com/blackmatrix7/ios_rule_script/master/rule/Clash/Speedtest/Speedtest.yaml}
@@ -192,6 +203,7 @@ rule-providers:
 # 国外网站
  proxy: {<<: *d, path: ./rules/proxy.yaml, url: https://raw.githubusercontents.com/blackmatrix7/ios_rule_script/master/rule/Clash/Global/Global_Domain.yaml}
 
+
 # 分流规则引用
 rules:
 #  - AND,((NETWORK,UDP),(DST-PORT,443)),REJECT
@@ -202,6 +214,13 @@ rules:
   - DOMAIN,d.metacubex.one,DIRECT
   - DOMAIN-SUFFIX,ziffstatic.com,Speedtest
   - RULE-SET,private,DIRECT
+
+  - RULE-SET,🛑 广告拦截,REJECT
+  - RULE-SET,🍃 应用净化,REJECT
+  - RULE-SET,🆎 AdBlock,REJECT
+  - RULE-SET,🆎 AdBlock,REJECT
+  - RULE-SET,🛡️ 隐私防护,REJECT
+
   - RULE-SET,speedtest,Speedtest
   - RULE-SET,openai,OpenAI
   - RULE-SET,youtube,YouTube
