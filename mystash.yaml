@@ -138,11 +138,11 @@ rule-providers:
  private: {<<: *d, path: ./rules/private.yaml, url: https://raw.githubusercontents.com/Loyalsoldier/clash-rules/release/private.txt}
 
 # 去广告
-  🛑 广告拦截: {<<: *c, path: ./rules/BanAD.yaml, url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanAD.list}
-  🍃 应用净化: {<<: *c, path: ./rules/BanProgramAD.yaml, url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanProgramAD.list}
-  🆎 AdBlock1: {<<: *c, path: ./rules/BanEasyList.yaml, url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanEasyList.list}
-  🆎 AdBlock2: {<<: *c, path: ./rules/BanEasyListChina.yaml, url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanEasyListChina.list}
-  🛡️ 隐私防护: {<<: *c, path: ./rules/BanEasyPrivacy.yaml, url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanEasyPrivacy.list}
+  🛑 广告拦截: {<<: *d, path: ./rules/BanAD.yaml, url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanAD.list}
+  🍃 应用净化: {<<: *d, path: ./rules/BanProgramAD.yaml, url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanProgramAD.list}
+  🆎 AdBlock1: {<<: *d, path: ./rules/BanEasyList.yaml, url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanEasyList.list}
+  🆎 AdBlock2: {<<: *d, path: ./rules/BanEasyListChina.yaml, url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanEasyListChina.list}
+  🛡️ 隐私防护: {<<: *d, path: ./rules/BanEasyPrivacy.yaml, url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanEasyPrivacy.list}
 
 
 # 网络测试
